@@ -1,0 +1,28 @@
+"O Labirinto da Caverna" (RPG de Texto)
+Um jogo em que o jogador toma decisões, gerencia vida/recursos e enfrenta eventos aleatórios ao longo de salas.
+
+🎯 O Objetivo do Programa
+Criar um jogo interativo via console onde o jogador precisa sobreviver a 10 salas para encontrar o tesouro e escapar.
+
+📋 O que o jogo deve conter:
+Estado do Jogador:
+
+Dicionário guardando vida (ex: 100), moedas (ex: 0) e inventario (lista de itens, ex: ["Tocha"]).
+
+Loop do Jogo (while):
+
+A cada rodada, apresente o número da sala atual e 3 opções (ex: 1. Abrir baú, 2. Ir para a próxima sala, 3. Usar item do inventário).
+
+Mecânicas de Decisão (if / elif / else):
+
+Encontros com monstros: O jogador perde vida ou usa uma arma do inventário.
+
+Armadilhas: Testam a sorte do jogador.
+
+Lojas/Mercadores: Permite trocar moedas por poções de vida ou itens.
+
+Condições de Fim de Jogo:
+
+Derrota: Se a vida <= 0.
+
+Vitória: Se o jogador chegar e completar a sala 10.
