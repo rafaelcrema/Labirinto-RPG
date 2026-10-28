@@ -2,7 +2,7 @@ dic_player = {
     'Vida': 100,
     'Força': 0,
     'Armadura': 0,
-    'Moeda': 0,
+    'Moeda': [],
 }
 
 inventario = {
@@ -12,5 +12,11 @@ inventario = {
     'Bota': {'Bota inicial': 2},
     'Espada': {'Espada Inicial': 2},
     'Escudo': {'Escudo Inicial': 2},
-    'Poção de vida': 1
+    'Poção de vida': []
               }
+
+dic_npc = {
+    'Vida': 50,
+    'Força': 2,
+    'Armadura': 0
+}
