@@ -37,7 +37,7 @@ while True:
             print(f'Você encontou: {jogada}')
 
             if jogada == 'Bau':
-                itens_bau.bau()
+                funcoes.bau()
 
             
             elif jogada == 'Batalha':
@@ -64,16 +64,16 @@ while True:
                 opcao = input('Oque vdeseja fazer?...')
 
                 if opcao == '1':
-                    print('Abrir loja')
+                    funcoes.lojinha()
+                    
                 elif opcao == '2':
                     print('Ignorar loja')
 
             nv_labirinto += 1
 
-            if nv_labirinto > 10:
-                break
+            if nv_labirinto == 10:
+                print('BATALHA FINAL')
 
     
     if escolha == '4':
         break
-    
