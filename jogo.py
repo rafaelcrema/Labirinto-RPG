@@ -1,4 +1,4 @@
-import personagem,itens_bau
+import personagem
 import funcoes
 import random
 import caminhos
@@ -31,7 +31,13 @@ while True:
 
     if escolha == '3':
         while True:
+            nv_labirinto += 1
+            
             print(f'======= LABIRINTO NIVEL {nv_labirinto} ======='.center(60))
+
+            if nv_labirinto > 9:
+                print(f'======= BATALHA FINAL ======='.center(60))
+                break
 
             jogada = random.choice(caminhos.caminho)
             print(f'Você encontou: {jogada}')
@@ -69,11 +75,10 @@ while True:
                 elif opcao == '2':
                     print('Ignorar loja')
 
-            nv_labirinto += 1
-
-            if nv_labirinto == 10:
-                print('BATALHA FINAL')
-
     
     if escolha == '4':
         break
+    break
+
+#BATALHA COM O BOSS
+funcoes.batalha_final()

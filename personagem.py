@@ -27,3 +27,9 @@ itens_loja = {
     'Poção de vida M': {'Poder': 10, 'Moedas': 10},
     'Poção de vida G': {'Poder': 10, 'Moedas': 10}
 }
+
+dic_boss = {
+    'Vida': 100,
+    'Força': 5,
+    'Armadura': 5
+}

@@ -162,3 +162,43 @@ def lojinha():
         print(f'Você comprou o item: {opcoes_loja[escolha_loja]}')
 
         break
+
+#FUNÇÃO BATALHA FINAL
+def batalha_final():
+
+    for arma, dano_arma in personagem.inventario['Arma'].items():
+        print(f'Arma: {arma} | Dano: {dano_arma}')
+    while True:
+
+        print(f'Vida Boss: {personagem.dic_boss['Vida']:<20} Sua vida: {personagem.dic_player['Vida']}')
+
+        print()
+
+        #PORRADA DO PLAYER
+        time.sleep(1)
+        personagem.dic_player['Força'] += dano_arma
+        porrada_play = personagem.dic_player['Força'] * random.randint(1,20)
+        personagem.dic_boss['Vida'] -= porrada_play
+
+        print(f'Sua porrada: {porrada_play}')
+        print(f'Vida do Boss: {personagem.dic_boss['Vida']}\n')
+        print('-----'*10)
+
+        time.sleep(1)
+        porrada_boss = personagem.dic_boss['Força'] * random.randint(1,20)
+        personagem.dic_player['Vida'] -= porrada_boss
+
+        print(f'Porrada do Boss: {porrada_boss}')
+        print(f'Vida do Personagem: {personagem.dic_player['Vida']}\n')
+        print('-----'*10)
+
+        if personagem.dic_boss['Vida'] < 1:
+            print(f'Vida Boss: {personagem.dic_boss['Vida']:<20} Sua vida: {personagem.dic_player['Vida']}')
+            print('Parabéns, você venceu o Labirinto')
+            break
+
+        elif personagem.dic_player['Vida'] < 1:
+            print(f'Vida Boss: {personagem.dic_boss['Vida']:<20} Sua vida: {personagem.dic_player['Vida']}')
+            print('Você perdeu o Labirinto')
+            break
+    
